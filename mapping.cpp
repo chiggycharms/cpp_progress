@@ -1,5 +1,5 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <string>
 using namespace std;
 /* int main(){
@@ -19,12 +19,12 @@ int main()
 {
     string s;
     cin >> s;
-    map<char, int> charMap;
+    unordered_map<char, int> charMap;
     for (int i = 0; i < s.size(); i++)
     {
         charMap[s[i]]++;
     }
-    map<char, int>::iterator itr;
+    unordered_map<char, int>::iterator itr;
     for (itr=charMap.begin();itr!=charMap.end();itr++)
     {
         cout << (*itr).first << " " << (*itr).second << endl;
