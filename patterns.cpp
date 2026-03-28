@@ -277,9 +277,97 @@ void patt18(int n)
         cout << endl;
     }
 }
+void patt19(int n)
+{
+    int spaces=0;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i;j++){
+            cout<<'*';
+        }
+        for (int j=1;j<=spaces;j++){
+            cout<<' ';
+        }
+        for(int j=0;j<n-i;j++){
+            cout<<'*';
+        }
+        spaces+=2;
+        cout<<endl;
+    }
+    spaces=2*n-2;
+    for(int i=1;i<=n;i++){
+        for(int j=0;j<i;j++){
+            cout<<'*';
+        }
+        for(int j=0;j<spaces;j++){
+            cout<<' ';
+        }
+        for(int j=0;j<i;j++){
+            cout<<'*';
+        }
+        spaces-=2;
+        cout<<endl;
+    }
+}
+void patt20(int n){
+    int spaces=2*n-2;
+    for(int i=1;i<=n;i++){
+        for(int j=0;j<i;j++){
+            cout<<'*';
+        }
+        for(int j=0;j<spaces;j++){
+            cout<<' ';
+        }
+        for(int j=0;j<i;j++){
+            cout<<'*';
+        }
+        spaces-=2;
+        cout<<endl;
+    }
+    spaces=2;
+    for(int i=1;i<=n-1;i++){
+        for(int j=0;j<n-i;j++){
+            cout<<'*';
+        }
+        for(int j=0;j<spaces;j++){
+            cout<<' ';
+        }
+        for(int j=0;j<n-i;j++){
+            cout<<'*';
+        }
+        spaces+=2;
+        cout<<endl;
+    }
+}
+void patt21(int n){
+    for(int i=0;i<n;i++){
+        if(i==0||i==n-1){
+            for(int j=0;j<n;j++){
+                cout<<'*';
+            }
+            cout<<endl;
+        }
+        else{
+            cout<<'*';
+            for(int j=0;j<n/2;j++){
+                cout<<' ';
+            }
+            cout<<'*';
+            cout<<endl;
+        }
+    }
+}
+void patt22(int n){
+    for(int i=0;i<(2*n-1);i++){
+        for(int j=0;j<(2*n-1);j++){
+            int top=i,left=j,bott=(2*n-2)-i,right=(2*n-2)-j;
+            cout<<(n-min(min(top,bott),min(left,right)))<<' ';
+        }
+        cout<<endl;
+    }
+}
 int main()
 {
     int c;
     cin >> c;
-    patt18(c);
+    patt22(c);
 }
