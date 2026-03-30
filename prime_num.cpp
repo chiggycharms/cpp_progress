@@ -1,9 +1,9 @@
 #include "bits\stdc++.h"
 using namespace std;\
 bool is_prime(int num){
-    int fac=1;
+    int fac=0;
     if(num>10){
-        for(int i=2;i<=sqrt(num);i++){
+        for(int i=1;i<=sqrt(num);i++){
             if(num%i==0){
                 fac=fac+1;
                 if((num/i)!=i) fac=fac+1;
@@ -11,7 +11,7 @@ bool is_prime(int num){
         }
     }
     else if(num<=10){
-        for(int i=2;i<=num;i++){
+        for(int i=1;i<=num;i++){
             if(num%i==0) fac=fac+1;
         }
     }
