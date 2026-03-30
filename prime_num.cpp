@@ -4,8 +4,10 @@ bool is_prime(int num){
     int fac=1;
     if(num>10){
         for(int i=2;i<=sqrt(num);i++){
-            if(num%i==0) fac=fac+1;
-            else if(num/i==i) continue;
+            if(num%i==0){
+                fac=fac+1;
+                if((num/i)!=i) fac=fac+1;
+            }
         }
     }
     else if(num<=10){
