@@ -1,5 +1,4 @@
-#include <iostream>
-#include <string>
+#include "bits/stdc++.h"
 using namespace std;
 // working function
 /*bool palindrome(string a){
@@ -49,7 +48,7 @@ int main(){
         cout << "Not Palindrome";
     }
 } */
-bool palindrome(int a)
+/* bool palindrome(int a)
 {
     int rev = 0,last;
     while(a!=0){
@@ -60,6 +59,19 @@ bool palindrome(int a)
     }
     if(a==rev)return true;
     else return false;
+} */
+string reverse(string a){
+    string s="";
+    int i,len=a.size();
+    for(int i=len-1;i>=0;i--){
+        s+=a[i];
+    }
+    return s;
+}
+bool palindrome(int x){
+    string y=to_string(x);
+    string rev=reverse(y);
+    return rev==y;
 }
 
 int main()
