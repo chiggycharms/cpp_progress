@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-bool powerrrr(int n){
+/* bool powerrrr(int n){
     if(n==1){
         return true;
     }
@@ -8,15 +8,16 @@ bool powerrrr(int n){
         return false;
     }
     return powerrrr(n/2);
+} */
+void printNtimes(int x){
+    if(x==0) return;
+    cout<<x<<endl;
+    printNtimes(--x);
 }
 int main(){
-    int res;
-    res=powerrrr(10);
-    if(res==true){
-        cout<<"the number is the power of 2"<<endl;
-    }
-    else{
-        cout<<"not power of 2";
-    }
+    int n;
+    cin>>n;
+    printNtimes(n);
+    
     
 }
