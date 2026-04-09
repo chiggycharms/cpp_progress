@@ -8,12 +8,14 @@ int hcf(int a,int b){
         }
     }
     return hcf; */
-    while(a>0&&b>0){
+/*     while(a>0&&b>0){
         if(a>b)a=a%b;
         else b=b%a;
     }
     if(a==0)return b;
-    else return a;
+    else return a; */
+    if(a%b==0)return b;
+    return hcf(b,a%b);
 }
 int main(){
     int x,y;
