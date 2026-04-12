@@ -1,6 +1,7 @@
 #include "bits/stdc++.h"
 using namespace std;
-int main(){
+int main()
+{
     vector<int> arr;
     arr.emplace_back(10);
     arr.emplace_back(20);
@@ -13,5 +14,6 @@ int main(){
     for(int i:arr){
         cout<<i<<' ';
     }
-    cout<<(2<<6);
+    cout<<endl;
+    cout<<(2<<6)<<endl;
 }
